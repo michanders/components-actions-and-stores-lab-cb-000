@@ -9,3 +9,5 @@ const store = createStore(reducer)
 function render(){
   ReactDOM.render(<BandInput store={store}/>, document.getElementById('container'))
 }
+store.subscribe(renderApp);
+store.dispatch({})
