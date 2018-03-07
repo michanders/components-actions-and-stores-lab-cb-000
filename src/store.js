@@ -2,6 +2,10 @@ import { render } from './index.js'
 
 export default function createStore(reducer){
     let state;
+    const dispatch = (action) => {
+        state = reducer(state, action);
+        listeners.forEach(listener => listener())
+    };
 
     function dispatch(action){
       state = reducer(state, action)
