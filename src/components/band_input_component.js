@@ -3,8 +3,8 @@ import React from 'react';
 export default class BandInput extends React.Component {
   onSubmit(event){
     event.preventDefault();
-    console.log("NOMG I'm in teh onSubmit() functions")
-  }
+    this.props.store.dispatch({type: 'ADD_BAND', payload: {title: event.target.children[1].value}})
+}
   render(){
     return(
       <form onSubmit={this.onSubmit.bind(this)}>
