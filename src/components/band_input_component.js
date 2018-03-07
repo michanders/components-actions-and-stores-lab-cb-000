@@ -1,8 +1,7 @@
-import React, { Component } from 'react'
-class BandInputComponent extends Component {
-  render(
-    return(
-      <div>hello</div>
-    )
-  )
+import React from 'react';
+
+export default class BandInput extends React.Component {
+    render(){
+        return <div>I LIEK TEH BANDZ</div>
+    }
 }
