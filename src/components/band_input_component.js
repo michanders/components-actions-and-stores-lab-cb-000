@@ -6,14 +6,12 @@ export default class BandInput extends React.Component {
     console.log("NOMG I'm in teh onSubmit() functions")
   }
   render(){
-      return(
-          <div>
-              <form>
-                  <label>Enter Band: </label>
-                  <input />
-                  <button type="submit">Submit</button>
-              </form>
-          </div>
+    return(
+      <form onSubmit={this.onSubmit.bind(this)}>
+          <label>Enter Band: </label>
+          <input />
+          <button type="submit">Submit</button>
+      </form>
       )
   }
 }
